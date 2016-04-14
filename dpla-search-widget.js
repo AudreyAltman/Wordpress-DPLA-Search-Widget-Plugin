@@ -30,6 +30,11 @@ var DPLAWidgetConfig = {
     search.type = 'text';
     search.placeholder = 'Search the DPLA!';
     search.name = 'q';
+
+    var param = document.createElement('input');
+    param.type = 'hidden';
+    param.name = 'subject';
+    param.value = 'cat';
           
     var submit = document.createElement('input');
     submit.type = 'submit';
@@ -37,6 +42,7 @@ var DPLAWidgetConfig = {
 
     form.appendChild(widgetImg); 
     form.appendChild(search);
+    form.appendChild(param);
     form.appendChild(submit);
 
     var search_div = document.getElementById("dpla_search_widget");
